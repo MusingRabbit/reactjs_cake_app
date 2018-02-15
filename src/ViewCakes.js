@@ -3,6 +3,7 @@ import CakeComponent from './CakeComponent'
 import Axios from 'axios'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import AddCake from './AddCake'
+import ViewCake from './ViewCake'
 
 class ViewCakes extends Component {
     constructor(){
@@ -62,7 +63,8 @@ class ViewCakes extends Component {
                   <p> Click <Link to = "/addCake"> here </Link> to add a new cake!</p>
                 </div>
                 <div className='col-md-3'>
-                  <div>{cakes.map(x=> <CakeComponent key={x.id} cake = {x}/>)}</div>
+                  <div>
+                  {cakes.map(x=> <Link to = {{pathname : '/viewCake', state : {cake : x}}}> <CakeComponent key={x.id} cake = {x}/> </Link>)} </div>
                 </div>
     
               </div>

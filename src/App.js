@@ -3,6 +3,8 @@ import Axios from 'axios'
 import './App.css';
 import ViewCakes from './ViewCakes'
 import AddCake from './AddCake'
+import ViewCake from './ViewCake'
+
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class App extends Component {
@@ -24,6 +26,7 @@ class App extends Component {
     
           <Route exact path="/" component={ViewCakes} />
           <Route exact path="/addCake" component={AddCake} />
+          <Route exact path="/viewCake" component={ViewCake} />
         </div>
       </Router>
       );
