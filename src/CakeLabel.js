@@ -25,9 +25,10 @@ class CakeLabel extends Component {
                     <div className='panel-heading'/>
                       {cake.name}
                     </div>
-                    <div className='panel-body'/>
-                        <img src={cake.imageUrl} className="img-responsive rounded float-right" alt='Cake Image'/>
+                    <div className='panel-body col-md-9'>
+                        <img src={cake.imageUrl} className="img-fluid rounded float-right" alt='Cake Image'/>
                     </div>
+                  </div>
                   </div>
             )
           }

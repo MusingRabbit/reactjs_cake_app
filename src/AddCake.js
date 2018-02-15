@@ -12,6 +12,7 @@ class AddCake extends Component {
             pageTitle : "Add Cake",
             cakeName : '',
             cakeComment : '',
+            cakeImage : '',
             yumFactor : 1
         }
     }
@@ -43,7 +44,7 @@ class AddCake extends Component {
             name : this.refs.txtName.value,
             comment : this.refs.txtComment.value,
             yumFactor : this.state.yumFactor,
-            imageUrl : 'http://via.placeholder.com/300x300'
+            imageUrl :  this.refs.txtImageURL.value ? this.refs.txtImageURL.value : 'http://via.placeholder.com/300x300'
         }
 
         Axios.post(this.state.apiUrl+'cakes', cake)
@@ -82,6 +83,16 @@ class AddCake extends Component {
                         </div>
                         <div className='col-md-5'>
                             <input type='text' id='txtComment' ref='txtComment' placeholder='Enter comment'></input>
+                        </div>
+                    </div>
+                    </div>
+                    <div className='form-group'>
+                        <div className ='row'>
+                        <div className='col-md-2 text-right'>
+                            <label>Image URL : </label>
+                        </div>
+                        <div className='col-md-5'>
+                            <input type='text' id='txtImageURL' ref='txtImageURL' placeholder='Enter Image URL'></input>
                         </div>
                     </div>
                     </div>

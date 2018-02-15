@@ -65,7 +65,7 @@ class ViewCake extends Component {
                                 Yum Factor : 
                             </div>
                             <div className='col-md-5'>
-                                <div className="form-check">
+                            <div className="form-check">
                                 <input className="form-check-input" onClick={this.radioClick} type="radio" name="radioYum" id="radioYum1" value="1" checked = {cake.yumFactor==1} />
                                 <label className="form-check-label">1</label>
                             </div>
