@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CakeComponent from './CakeComponent'
+import CakeLabel from './CakeLabel'
 import Axios from 'axios'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import AddCake from './AddCake'
@@ -64,7 +64,7 @@ class ViewCakes extends Component {
                 </div>
                 <div className='col-md-3'>
                   <div>
-                  {cakes.map(x=> <Link to = {{pathname : '/viewCake', state : {cake : x}}}> <CakeComponent key={x.id} cake = {x}/> </Link>)} </div>
+                  {cakes.map(x=> <Link to = {{pathname : '/viewCake', state : {cake : x}}}> <CakeLabel key={x.id} cake = {x}/> </Link>)} </div>
                 </div>
     
               </div>

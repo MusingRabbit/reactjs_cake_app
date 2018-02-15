@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class CakeComponent extends Component {
+class CakeLabel extends Component {
 
     constructor(){
         super();
@@ -33,4 +33,4 @@ class CakeComponent extends Component {
           }
     }
 
-export default CakeComponent;
+export default CakeLabel;
